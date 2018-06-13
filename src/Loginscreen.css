@@ -1,0 +1,53 @@
+input[type="email"]:focus,
+input[type="password"]:focus {
+	border-color: #7b84ed;
+	box-shadow: none;
+}
+
+.LoginForm {
+	position: relative;
+	margin: 0 auto;
+	padding: 3rem;
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 5px;
+	background: white;
+}
+
+.LoginForm h1, .LoginForm h4 {
+	margin: 0 0 15px 0;
+}
+
+.LoginForm h4 {
+	margin-bottom: 35px;
+	color: gray;
+}
+
+.closeBtn {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	/*border-radius: 30px;
+	background: #7b84ed;*/
+	color: #7b84ed;
+	/*width: 20px;
+	text-align: center;*/
+}
+
+.submitBtn {
+	margin-bottom: 35px;
+	background: #7b84ed;
+	border: none;
+}
+
+.submitBtn:hover {
+	background: #56b3dd;
+}
+
+.btnFloatRight {
+	float: right;
+}
+
+.animate {
+	transition: background-color .2s ease-in;
+}

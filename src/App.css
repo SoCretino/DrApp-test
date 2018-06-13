@@ -1,0 +1,109 @@
+.Login {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(0,0,0,0.2);
+}
+
+.navbar {
+	position: static;
+	background: none;
+	border: none;
+	padding: 10px 0;
+}
+
+.navbar-toggle{
+	border: none;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: white!important;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background: none!important;
+}
+
+.navbar-default .navbar-nav li a {
+	color: white;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	color: white;
+	text-shadow: 1px 0px #fff;
+}
+
+.navLoginBtn {
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-shadow: none!important;
+}
+
+.navSignUpBtn {
+	padding: 10px;
+	background: white;
+	color: #56b3dd;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.oval-left {
+	z-index:-10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	user-select: none;
+}
+
+.oval-right {
+	z-index:-10;
+	position: absolute;
+	top: 25rem;
+	right: 0;
+	user-select: none;
+}
+
+.main {
+	margin-top: 150px;
+	color: white;
+}
+
+.main h2, .main h4 {
+	margin-bottom: 25px;
+}
+
+.main h4 {
+	font-weight: 300;
+}
+
+.signUpBtn {
+	cursor: pointer;
+	margin: 0 auto;
+	width: 65%;
+	padding: 10px;
+	border-radius: 10px;
+	background: white;
+	color: #43cad5;
+	text-transform: uppercase;
+}
+
+.signUpBtn:hover {
+	background: #43cad5;
+	color: #fff;
+}
+
+@media (max-width: 720px) {
+	.navbar-collapse {
+		background: #43cad5;
+		border: none;
+	}
+}

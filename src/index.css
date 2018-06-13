@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+html {
+	font-size: 14px;
+}
+
+body {
+	height: 1000px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(#7b84ed, #56b3dd);;
+}
+
+#DrAppLogin {
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(0,0,0,0.2);
+}
+
+.nav-bar {
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-menu li {
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.nav-menu ul li a {
+	color: white;
+}
+
+.nav-menu ul li a:hover {
+	color: white;
+	text-shadow: 1px 0px #fff;
+	text-decoration: none;
+}
+
+.navLoginBtn {
+	color: white;
+	padding: 10px 40px;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-shadow: none!important;
+}
+
+.navSignUpBtn {
+	padding: 10px 40px;
+	background: white;
+	color: #56b3dd;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.oval-left {
+	z-index:-10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	user-select: none;
+}
+
+.oval-right {
+	z-index:-10;
+	position: absolute;
+	top: 25rem;
+	right: 0;
+	user-select: none;
+}
+
+.main {
+	margin-top: 150px;
+	color: white;
+}
+
+.main h2, .main h4 {
+	margin-bottom: 25px;
+}
+
+.main h4 {
+	font-weight: 300;
+}
+
+.signUpBtn {
+	cursor: pointer;
+	margin: 0 auto;
+	width: 65%;
+	padding: 10px;
+	border-radius: 10px;
+	background: white;
+	color: #43cad5;
+	text-transform: uppercase;
+}
+
+.signUpBtn:hover {
+	background: #43cad5;
+	color: #fff;
+}
+
+@media (max-width: 720px) {
+	
+}
