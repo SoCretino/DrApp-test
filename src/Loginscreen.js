@@ -9,12 +9,22 @@ class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			email:'',
-			password:''
+			email: '',
+			password: '',
+			emailIsValid: false,
+			passwordIsValid: false,
+			showLogin: true,
+			showCloseBtn: true
 		};
 	}
 
-	handleChange = event => {
+	closeLogin = () => {
+		this.setState({
+			showLogin: !this.state.showLogin
+		});
+	}
+
+	handleChange = (event) => {
 		this.setState({
 			[event.target.id]: event.target.value
 		});
@@ -44,29 +54,28 @@ class Login extends Component {
 			console.log(error);
 		});
 	}
-	/*
-	close = () => {
-		this.props.close
-	}
-	*/
 	render() {
+		const { showLogin, showCloseBtn, emailIsValid, passwordIsValid } = this.state;
 		return (
-			<form className="LoginForm" onSubmit={this.callAPI}>
-				/*{this.props.close && */ <FontAwesome className="closeBtn fa-times-circle" size="2x" /*onClick={this.close} }*//>
-				<h1>Ingreso</h1>
-				<h4>Introduzca sus datos a continuación</h4>
-				<FormGroup controlId="email" bsSize="large">
-					<FormControl autoFocus type="email" value={this.state.email} placeholder="Email" onChange={this.handleChange} />
-				</FormGroup>
-				<FormGroup controlId="password" bsSize="large">
-					<FormControl type="password" value={this.state.password} placeholder="Contraseña" onChange={this.handleChange} />
-				</FormGroup>
-				<Button className="submitBtn" block type="submit" bsSize="large" bsStyle="primary" disabled={!this.validateForm()}>
-					Iniciar sesión
-				</Button>
-				<Button className="animate" bsSize="small">¿Olvidó su contraseña?</Button>
-				<Button className="btnFloatRight animate" bsSize="small">Registrarse</Button>
-			</form>
+			showLogin && (
+				<form className="LoginForm" onSubmit={this.callAPI}>
+					{showCloseBtn && (<FontAwesome name="closeBtn fa-times-circle" size="2x" onClick={this.closeLogin} />)}
+					<h1>Ingreso</h1>
+					<h4>Introduzca sus datos a continuación</h4>
+					<FormGroup controlId="email" className={!this.state.emailIsValid && "has-error"} bsSize="large">
+						<FormControl autoFocus type="email" value={this.state.email} placeholder="Email" onChange={this.handleChange} />
+						{!emailIsValid && <span>No</span>}
+					</FormGroup>
+					<FormGroup controlId="password" className={this.state.passwordIsValid && "has-error"} bsSize="large">
+						<FormControl type="password" value={this.state.password} placeholder="Contraseña" onChange={this.handleChange} />
+					</FormGroup>
+					<Button className="submitBtn" block type="submit" bsSize="large" bsStyle="primary" disabled={!this.validateForm()}>
+						Iniciar sesión
+					</Button>
+					<Button className="animate" bsSize="small">¿Olvidó su contraseña?</Button>
+					<Button className="btnFloatRight animate" bsSize="small">Registrarse</Button>
+				</form>
+			)
 		);
 	}
 }

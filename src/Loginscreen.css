@@ -22,16 +22,12 @@ input[type="password"]:focus {
 	color: gray;
 }
 
-.closeBtn {
+.fa-closeBtn {
 	cursor: pointer;
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	/*border-radius: 30px;
-	background: #7b84ed;*/
 	color: #7b84ed;
-	/*width: 20px;
-	text-align: center;*/
 }
 
 .submitBtn {

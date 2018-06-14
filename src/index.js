@@ -10,4 +10,5 @@ window.DrAppLogin = {
 	} 
 }
 */
+ReactDOM.render(<Login />,document.getElementById('DrAppLogin'));
 registerServiceWorker();
